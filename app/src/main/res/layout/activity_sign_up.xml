@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/username_password_section"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/relativeLayout0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="@dimen/margin_medium_10"
+            android:layout_marginStart="@dimen/margin_medium_10"
+            android:layout_marginRight="@dimen/margin_medium_10"
+            android:layout_marginEnd="@dimen/margin_medium_10"
+            android:layout_marginTop="@dimen/margin_large_15">
+
+            <ImageView
+                android:id="@+id/imgView_username"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:src="@drawable/ic_person_name"
+                android:tint="@color/white" />
+
+            <EditText
+                android:hint="Phone Number"
+                android:inputType="textMultiLine"
+                android:id="@+id/et_registration_user_name"
+                android:text="Enter your Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgView_username"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imgView_username"
+                android:background="@color/editTextBG"
+                android:paddingLeft="20dp"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="@dimen/margin_medium_10"
+            android:layout_marginStart="@dimen/margin_medium_10"
+            android:layout_marginRight="@dimen/margin_medium_10"
+            android:layout_marginEnd="@dimen/margin_medium_10"
+            android:layout_marginTop="@dimen/margin_large_15">
+
+            <ImageView
+                android:id="@+id/imgView_userIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:src="@drawable/ic_phone_android"
+                android:tint="@color/white" />
+
+            <EditText
+                android:hint="Phone Number"
+                android:inputType="number"
+                android:id="@+id/et_registration_user_phone_number"
+                android:text="01315218889"
+                android:maxLength="14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imgView_userIcon"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imgView_userIcon"
+                android:background="@color/editTextBG"
+                android:paddingLeft="20dp"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="@dimen/margin_medium_10"
+            android:layout_marginStart="@dimen/margin_medium_10"
+            android:layout_marginRight="@dimen/margin_medium_10"
+            android:layout_marginEnd="@dimen/margin_medium_10"
+            android:layout_marginTop="@dimen/margin_large_15">
+
+            <ImageView
+                android:id="@+id/imgView_userIcon_"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:src="@drawable/ic_vpn_key"
+                android:tint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_registration_user_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="123456"
+                android:layout_alignBottom="@+id/imgView_userIcon_"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imgView_userIcon_"
+                android:background="@color/editTextBG"
+                android:hint="Password"
+                android:paddingLeft="20dp"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="@dimen/margin_medium_10"
+            android:layout_marginStart="@dimen/margin_medium_10"
+            android:layout_marginRight="@dimen/margin_medium_10"
+            android:layout_marginEnd="@dimen/margin_medium_10"
+            android:layout_marginTop="@dimen/margin_large_15">
+
+            <ImageView
+                android:id="@+id/imgView_re_type_pass"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:src="@drawable/ic_vpn_key"
+                android:tint="@color/white" />
+
+            <EditText
+                android:id="@+id/et_registration_user_re_type_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="123456"
+                android:layout_alignBottom="@+id/imgView_re_type_pass"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imgView_re_type_pass"
+                android:background="@color/editTextBG"
+                android:hint="Re-type Password"
+                android:paddingLeft="20dp"
+                android:textSize="15sp" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_registration_login"
+            android:text="Registration"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/custom_button_background"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/tv_registration_already_have_account"
+            android:text="Already have an account? sign up"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="12sp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

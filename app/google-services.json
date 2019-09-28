@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "824148699855",
+    "firebase_url": "https://dream-social-club.firebaseio.com",
+    "project_id": "dream-social-club",
+    "storage_bucket": "dream-social-club.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824148699855:android:140095e20f20ff5065e5ba",
+        "android_client_info": {
+          "package_name": "com.example.dreamsocialclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824148699855-j41mpgvde9ph64ks66jpsr0v4sn43jo0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dreamsocialclub",
+            "certificate_hash": "c511167a5021d2c6527eb075dbedc83b52d4e261"
+          }
+        },
+        {
+          "client_id": "824148699855-h5k0ddar7phvgofhjr1v7fg81jdueddv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhbAH-J4MIWx40Tpffelw8hRy6lwXeVek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824148699855-h5k0ddar7phvgofhjr1v7fg81jdueddv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
