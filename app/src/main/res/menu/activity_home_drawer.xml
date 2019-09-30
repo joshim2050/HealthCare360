@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_silver_coin"
+            android:icon="@drawable/ic_silvercoin"
+            android:title="@string/silver_coin" />
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="@string/messages" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_profile"
+            android:title="@string/profile" />
+        <item
+            android:id="@+id/nav_topup"
+            android:icon="@drawable/ic_touch_app"
+            android:title="@string/topup" />
+        <item
+            android:id="@+id/nav_convert_coin"
+            android:icon="@drawable/ic_convert_coin"
+            android:title="@string/convert_coin" />
+        <item
+            android:id="@+id/nav_cash_out"
+            android:icon="@drawable/ic_money"
+            android:title="@string/cash_out" />
+        <item
+            android:id="@+id/nav_tutorial"
+            android:icon="@drawable/ic_convert_coin"
+            android:title="@string/tutorial" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_support_online"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/support_online" />
+            <item
+                android:id="@+id/nav_terms_and_condition"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/terms_and_condition" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/privacy_policy" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_arrow_back"
+                android:title="@string/menu_logout" />
+            <item
+                android:id="@+id/nav_logoust"
+                android:icon="@drawable/ic_arrow_back"
+                android:title="@string/menu_logout" />
+        </menu>
+    </item>
+
+</menu>

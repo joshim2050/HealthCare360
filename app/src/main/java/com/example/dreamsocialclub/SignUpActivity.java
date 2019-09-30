@@ -29,6 +29,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity implements View.OnClickListener {
+    private PreferenceData preferenceData;
     private FirebaseAuth signupAuth;
     private TextView tv_registration_already_have_account;
     private EditText et_registration_user_name,et_registration_user_phone_number,et_registration_user_password,et_registration_user_re_type_password;
@@ -37,9 +38,9 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
         //intview
         initview();
+        this.preferenceData = new PreferenceData(SignUpActivity.this);
         tv_registration_already_have_account.setOnClickListener(this);
         btn_registration_login.setOnClickListener(this);
 
@@ -106,9 +107,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                 }else {
 
+                    preferenceData.setValue("name",name);
+                    preferenceData.setValue("phone",phone_number);
                     Intent gotoveryfication = new Intent(SignUpActivity.this,VerifyPhoneActivity.class);
-                    gotoveryfication.putExtra("mobile", phone_number);
-                    gotoveryfication.putExtra("name", name);
+                   gotoveryfication.putExtra("mobile",phone_number);
                     startActivity(gotoveryfication);
                 }
 

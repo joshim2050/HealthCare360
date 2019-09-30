@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.dreamsocialclub.home.HomeActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskExecutors;
@@ -25,7 +26,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.concurrent.TimeUnit;
 
 public class VerifyPhoneActivity extends AppCompatActivity {
-
+    String mobile;
+    String name;
+    private PreferenceData preferenceData;
     //These are the objects needed
     //It is the verification id that will be sent to the user
     private String mVerificationId;
@@ -42,6 +45,7 @@ public class VerifyPhoneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_phone);
+        this.preferenceData = new PreferenceData(VerifyPhoneActivity.this);
 
         //initializing objects
         mAuth = FirebaseAuth.getInstance();
@@ -52,11 +56,11 @@ public class VerifyPhoneActivity extends AppCompatActivity {
         //getting mobile number from the previous activity
         //and sending the verification code to the number
         Intent intent = getIntent();
-        String mobile = intent.getStringExtra("mobile");
-        String name = intent.getStringExtra("name");
-        String current_user_uid = mAuth.getCurrentUser().getUid();
-        databaseReference.child(current_user_uid).setValue("name",name);
-        databaseReference.child(current_user_uid).setValue("mobile",mobile);
+         mobile = intent.getStringExtra("mobile");
+         //name = intent.getStringExtra("name");
+         //mobile = preferenceData.getStringValue("mobile");
+//        name = preferenceData.getStringValue("name");
+
 
         sendVerificationCode(mobile);
 
@@ -141,9 +145,13 @@ public class VerifyPhoneActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //verification successful we will start the profile activity
-                            Intent intent = new Intent(VerifyPhoneActivity.this, DashboardActivity.class);
+                            Intent intent = new Intent(VerifyPhoneActivity.this, HomeActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
+                            String current_user_uid = mAuth.getCurrentUser().getUid();
+
+                            databaseReference.child(current_user_uid).child("name").setValue(preferenceData.getStringValue("name"));
+                            databaseReference.child(current_user_uid).child("mobile").setValue(mobile);
 
                         } else {
 

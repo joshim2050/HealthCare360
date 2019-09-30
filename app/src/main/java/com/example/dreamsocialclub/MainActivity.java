@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.example.dreamsocialclub.home.HomeActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
                         startActivity(toy);
                     }else {
-                        Intent baby = new Intent(MainActivity.this, DashboardActivity.class);
+                        Intent baby = new Intent(MainActivity.this, HomeActivity.class);
                         startActivity(baby);
                     }
                     finish();
