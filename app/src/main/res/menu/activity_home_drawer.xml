@@ -36,28 +36,24 @@
             android:id="@+id/nav_tutorial"
             android:icon="@drawable/ic_convert_coin"
             android:title="@string/tutorial" />
+        <item
+            android:id="@+id/nav_support_online"
+            android:icon="@drawable/ic_suppoet_online"
+            android:title="@string/support_online" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_support_online"
-                android:icon="@drawable/ic_menu_share"
-                android:title="@string/support_online" />
-            <item
                 android:id="@+id/nav_terms_and_condition"
-                android:icon="@drawable/ic_menu_share"
+                android:icon="@drawable/ic_terms_and_conditions"
                 android:title="@string/terms_and_condition" />
             <item
                 android:id="@+id/nav_privacy_policy"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_privacy_and_plicy"
                 android:title="@string/privacy_policy" />
             <item
                 android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_arrow_back"
-                android:title="@string/menu_logout" />
-            <item
-                android:id="@+id/nav_logoust"
                 android:icon="@drawable/ic_arrow_back"
                 android:title="@string/menu_logout" />
         </menu>

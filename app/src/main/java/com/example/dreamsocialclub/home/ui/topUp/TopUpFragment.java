@@ -1,4 +1,4 @@
-package com.example.dreamsocialclub.home.ui.send;
+package com.example.dreamsocialclub.home.ui.topUp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,11 +9,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.dreamsocialclub.R;
 
-public class SendFragment extends Fragment {
+public class TopUpFragment extends Fragment {
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_send, container, false);
+        View root = inflater.inflate(R.layout.fragment_top_up, container, false);
         return root;
     }
 }

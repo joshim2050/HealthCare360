@@ -3,21 +3,67 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/text_home"
+    <LinearLayout
+        android:id="@+id/linearlayout1"
+        android:weightSum="2"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Boltu ki koros"
-        android:textStyle="bold"
-        android:layout_marginEnd="8dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_centerInParent="true"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
+
+
+        <Button
+
+            android:text="Active Friend"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp" />
+        <Button
+            android:text="Friends"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/friend_picture"
+        android:layout_below="@+id/linearlayout1"
+        android:text="Friends Picture"
+        android:textSize="17sp"
+        android:padding="10dp"
+        android:layout_width="150dp"
+        android:textAllCaps="false"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/public_post"
+        android:layout_below="@+id/friend_picture"
+        android:text="Public Post"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/earn_coin"
+        android:layout_below="@+id/public_post"
+        android:text="Earn Coin"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_centerInParent="true"/>
+    <Button
+        android:id="@+id/free_sms"
+        android:layout_below="@+id/earn_coin"
+        android:text="Free SMS"
+        android:textSize="25sp"
+        android:padding="10dp"
+
+        android:textAllCaps="false"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"/>
 </RelativeLayout>

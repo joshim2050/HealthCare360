@@ -1,23 +1,20 @@
-package com.example.dreamsocialclub.home.ui.tools;
+package com.example.dreamsocialclub.home.ui.profile;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+
 import com.example.dreamsocialclub.R;
 
-public class ToolsFragment extends Fragment {
-
+public class ProfileFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-        final TextView textView = root.findViewById(R.id.text_tools);
+        View root = inflater.inflate(R.layout.fragment_profile, container, false);
         return root;
     }
 }

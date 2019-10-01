@@ -7,36 +7,25 @@ import android.os.Bundle;
 import com.example.dreamsocialclub.LoginActivity;
 import com.example.dreamsocialclub.PreferenceData;
 import com.example.dreamsocialclub.R;
-import com.example.dreamsocialclub.home.ui.gallery.GalleryFragment;
+import com.example.dreamsocialclub.home.ui.getsilvercoin.GetSilverCoinFragment;
 import com.example.dreamsocialclub.home.ui.home.HomeFragment;
-import com.example.dreamsocialclub.home.ui.send.SendFragment;
-import com.example.dreamsocialclub.home.ui.share.ShareFragment;
-import com.example.dreamsocialclub.home.ui.slideshow.SlideshowFragment;
-import com.example.dreamsocialclub.home.ui.tools.ToolsFragment;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.dreamsocialclub.home.ui.message.MessageFragment;
+import com.example.dreamsocialclub.home.ui.message.TestActivity;
+import com.example.dreamsocialclub.home.ui.profile.ProfileFragment;
+import com.example.dreamsocialclub.home.ui.topUp.TopUpFragment;
+import com.example.dreamsocialclub.home.ui.convertCoin.ConvertCoinFragment;
 
 import android.os.Handler;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -98,7 +87,7 @@ public class HomeActivity extends AppCompatActivity
 
 
 
-        displaySelectedScreen(R.id.nav_home);
+       // displaySelectedScreen(R.id.nav_home);
     }
 
 //    @Override
@@ -127,29 +116,57 @@ public class HomeActivity extends AppCompatActivity
 //            }
 //        });
 //    }
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+        displaySelectedScreen(id);
+        return true;
+    }
 
     private void displaySelectedScreen(int id) {
         Fragment fragment = null;
         Bundle bundle = null;
         switch (id) {
             case R.id.nav_home:
+                Toast.makeText(context, "this is : home", Toast.LENGTH_SHORT).show();
                 fragment = new HomeFragment();
                 break;
-            case R.id.nav_gallery:
-                fragment = new GalleryFragment();
+            case R.id.nav_silver_coin:
+                fragment = new GetSilverCoinFragment();
                 break;
-            case R.id.nav_slideshow:
-                fragment = new SlideshowFragment();
+            case R.id.nav_message:
+                fragment = new MessageFragment();
+                Toast.makeText(context, "this is : nav_message", Toast.LENGTH_SHORT).show();
                 break;
+            case R.id.nav_profile:
+                fragment = new ProfileFragment();
+                Toast.makeText(context, "this is : nav_profile ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_topup:
+                fragment = new TopUpFragment();
+                Toast.makeText(context, "this is : nav_topup ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_convert_coin:
+                fragment = new ConvertCoinFragment();
+                Toast.makeText(context, "this is : nav_convert_coin ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_cash_out:
 
-            case R.id.nav_tools:
-                fragment = new ToolsFragment();
+                Toast.makeText(context, "this is : nav_cash_out ", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.nav_share:
-                fragment = new ShareFragment();
+            case R.id.nav_tutorial:
+                Toast.makeText(context, "this is : nav_tutorial ", Toast.LENGTH_SHORT).show();
                 break;
-                case R.id.nav_send:
-                fragment = new SendFragment();
+            case R.id.nav_support_online:
+                Toast.makeText(context, "this is : nav_support_online ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_terms_and_condition:
+                Toast.makeText(context, "this is : nav_terms_and_condition ", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.nav_privacy_policy:
+                Toast.makeText(context, "this is : nav_privacy_policy ", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_logout:
                 firebaseAuth.signOut();
@@ -209,7 +226,7 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_title) {
 
             return true;
         }
@@ -217,13 +234,6 @@ public class HomeActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-        displaySelectedScreen(id);
-        return true;
-    }
+
 
 }
