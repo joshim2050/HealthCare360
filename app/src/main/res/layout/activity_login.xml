@@ -86,31 +86,37 @@
 
 
         </RelativeLayout>
-
-        <Button
-            android:id="@+id/ben_login"
-            android:text="Login"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:textColor="@color/colorPrimary"
-           android:background="@drawable/custom_button_background"
-            android:layout_marginTop="10dp"
+        <LinearLayout
             android:layout_gravity="center"
-            android:layout_width="150dp"
-            android:layout_height="50dp"/>
-
-        <TextView
-            android:id="@+id/tv_login_need_account"
-            android:text="Don't have acccount? sign up"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="12sp"
+            android:orientation="horizontal"
             android:padding="10dp"
-            android:layout_gravity="center"
-            android:textColor="@color/colorAccent"
-            android:textAllCaps="false"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/tv_login_need_account"
+                android:text="Sign up"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:layout_margin="3dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/custom_button_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"/>
+            <Button
+                android:id="@+id/ben_login"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/custom_button_background"
+                android:layout_marginTop="10dp"
+                android:layout_width="150dp"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+
 
     </LinearLayout>
 
